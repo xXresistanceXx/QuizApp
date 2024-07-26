@@ -101,9 +101,8 @@ function showQuestion() {
 }
 
 function answer(selector) {
-  // Funktion mit übergebenem Parameter
-  let question = questions[currentQuestion]; //packt alle Informationen aus dem Array -questions- in die Variable -question-
-  let selectedQuestionNumber = selector.slice(-1); // .slice(-1) holt sich den letzten String-Charakter und packt ihn in die seperate variable -selectedQuestionNumber-
+  let question = questions[currentQuestion]; 
+  let selectedQuestionNumber = selector.slice(-1); 
   let idOfRightAnswer = `answer_${question['right_answer']}`;
 
   if (selectedQuestionNumber == question['right_answer']) {
@@ -122,8 +121,8 @@ function answer(selector) {
 }
 
 function nextQuestion() {
-  currentQuestion++; //Variable wird von 0 auf 1 erhöht
-  document.getElementById('next-button').disabled = true; //button wird wieder disabled
+  currentQuestion++;
+  document.getElementById('next-button').disabled = true; 
   resetAnswerButtons();
   showQuestion();
 }
